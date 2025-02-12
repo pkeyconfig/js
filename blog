@@ -1,6 +1,10 @@
-var a = document.createElement('a');
-var linkText = document.createTextNode("my blogger");
-a.appendChild(linkText);
-a.title = "my blogger";
-a.href = "http://www.blogger.com";
-document.body.appendChild(a);
+let dropdown = $('#emiten');
+dropdown.empty();
+dropdown.append('<option selected=true disabled>Pilih Emiten</option>');
+dropdown.prop('selectedIndex', 0);
+const url = 'https://raw.githubusercontent.com/mobilenubi/idx/main/emiten';
+$.getJSON(url, function (data) {
+  $.each(data, function (key, entry) {
+    dropdown.append($('<option></option>').attr('value', entry.KodeEmiten).text(entry.KodeEmiten + ' - ' + entry.NamaEmiten));
+  })
+});
