@@ -1,1 +1,1 @@
-document.write("<a href='"https://www.blogger.com"'>Blogger</a>");
+document.write('<a href="https://www.blogger.com">Blogger</a>');
