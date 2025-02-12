@@ -1,0 +1,6 @@
+var a = document.createElement('a');
+var linkText = document.createTextNode("my blogger");
+a.appendChild(linkText);
+a.title = "my blogger";
+a.href = "http://www.blogger.com";
+document.body.appendChild(a);
